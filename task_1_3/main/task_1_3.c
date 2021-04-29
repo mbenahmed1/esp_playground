@@ -1,5 +1,5 @@
 /* 
-    1.2 Aufnahme eines Audios und Speichern auf der SD-Card
+    1.3 Senden eines Audio per HTTP
 */
 
 #include <string.h>
