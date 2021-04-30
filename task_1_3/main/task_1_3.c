@@ -274,7 +274,7 @@ void app_main(void)
     es8388_write_reg(ES8388_ADCCONTROL1, 0x84);
 
     // set clock rate
-    i2s_stream_set_clk(i2s_stream_reader, 44100, 16, 2);
+    i2s_stream_set_clk(i2s_stream_reader, CONFIG_AUDIO_RATE, CONFIG_AUDIO_BITS, CONFIG_AUDIO_CHANNELS);
 
     ESP_LOGI(TAG, "[ 6 ] Press [Rec] button to record, Press [Mode] to exit");
 

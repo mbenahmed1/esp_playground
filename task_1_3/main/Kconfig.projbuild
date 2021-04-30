@@ -20,5 +20,21 @@ config SERVER_URI
     help
         Server URL to send data
 
+config AUDIO_RATE
+	int "Sample Rate in hz"
+	default 44100
+	help
+		Audio sample rate
 
+config AUDIO_BITS
+	int "Audio bits"
+	default 16
+	help
+		Audio bits
+
+config AUDIO_CHANNELS
+	int "Audio channels"
+	default 2
+	help
+		Audio channels
 endmenu
