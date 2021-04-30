@@ -14,7 +14,7 @@ import random
 # tcp
 BUFFERSIZE = 2048
 HOST = '192.168.2.115'
-PORT = 25888
+PORT = 25666
 
 # audio
 FILENAME = "audio"
