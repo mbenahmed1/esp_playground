@@ -13,6 +13,7 @@ Run `$ idf.py menuconfig` and navigate to the task\_1\_3 submenu.
 
 Configure server URL, ssid and password. All other configurations should work by default.
 
+Run `$ idf.py -p /dev/ttyUSB0 flash monitor` to compile and flash onto the LyraT board.
 
 Start server with
 

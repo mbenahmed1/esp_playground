@@ -16,6 +16,8 @@ Configure host, ssid and password. All other configurations should work by defau
 Set HOST in `server.py` according to the ip address of the machine you are running the server on.
 This has to be the same address as configured in menuconfig of the LyraT board.
 
+Run `$ idf.py -p /dev/ttyUSB0 flash monitor` to compile and flash onto the LyraT board.
+
 Start server with
 
 `$ python3 server.py`.
