@@ -14,3 +14,5 @@ build
 workspace*
 .cache
 sdkconfig*
+*.wav
+*.flac
