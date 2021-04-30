@@ -252,11 +252,11 @@ void app_main(void)
     const char *rec_link_tag[3] = {"i2s", "wav", "file"};
     audio_pipeline_link(rec_pipeline, &rec_link_tag[0], 3);
 
-    ESP_LOGI(TAG, "[ 4.11 ] Set up  event listener");
+    ESP_LOGI(TAG, "[4.11] Set up  event listener");
     audio_event_iface_cfg_t evt_cfg = AUDIO_EVENT_IFACE_DEFAULT_CFG();
     audio_event_iface_handle_t evt = audio_event_iface_init(&evt_cfg);
 
-    ESP_LOGI(TAG, "[ 4.12 ] Listening event from pipeline");
+    ESP_LOGI(TAG, "[4.12] Listening event from pipeline");
     audio_pipeline_set_listener(http_pipeline, evt);
 
     ESP_LOGI(TAG, "[ 5 ] Initialize buttons and assign callback function");
