@@ -22,7 +22,7 @@ FORMAT = "flac"
 SAMPLEWIDTH = 2
 CHANNELS = 2
 FRAMERATE = 44100
-RANDOMSTRINLENGTH = 10
+RANDOMSTRINGLENGTH = 10
 
 
 def receive_data() -> bytearray:
@@ -41,7 +41,7 @@ def receive_data() -> bytearray:
         conn, addr = s.accept()
         counter = 0
         with conn:
-            print('Connected by ' + str(addr[0]) + ':' + str(addr[1])  + ' ...')
+            print('Connected by ' + str(addr[0]) + ':' + str(addr[1]) + ' ...')
             while True:
                 data = conn.recv(BUFFERSIZE)
                 print('     Receiving package ' + str(counter), end='\r')
@@ -55,15 +55,19 @@ def receive_data() -> bytearray:
 
 def save_bytes_as_file(raw_data: bytearray):
     '''Saves the given bytearray as file.
-    
+
     parameters:
         raw_data:       bytesarray with the raw data
     '''
-    audio = AudioSegment.from_raw(io.BytesIO(raw_data), sample_width=SAMPLEWIDTH, channels=CHANNELS, frame_rate=FRAMERATE)
-    random_string = ''.join(random.choices(string.ascii_lowercase + string.digits, k=RANDOMSTRINLENGTH))
+    audio = AudioSegment.from_raw(io.BytesIO(
+        raw_data), sample_width=SAMPLEWIDTH, channels=CHANNELS, frame_rate=FRAMERATE)
+    random_string = ''.join(random.choices(
+        string.ascii_lowercase + string.digits, k=RANDOMSTRINLENGTH))
     audio.export(FILENAME + '_' + random_string + '.' + FORMAT, format=FORMAT)
-    
-    print('Saved audio as \'' + FILENAME + '_' + random_string  + '.' + FORMAT + '\' ...')
+
+    print('Saved audio as \'' + FILENAME + '_' +
+          random_string + '.' + FORMAT + '\' ...')
+
 
 # call functions
 save_bytes_as_file(receive_data())
