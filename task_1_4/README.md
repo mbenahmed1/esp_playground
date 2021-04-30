@@ -11,6 +11,9 @@ Run `$ idf.py menuconfig` and navigate to the task\_1\_4 submenu.
 
 Configure host, ssid and password. All other configurations should work by default.
 
+Set HOST in `server.py` according to the ip address of the machine you are running the server on.
+This has to be the same address as configured in menuconfig of the LyraT board.
+
 Start server with
 
 `$ python3 server.py`.
