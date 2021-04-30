@@ -1,0 +1,53 @@
+menu "Task_1_4 Configuration"
+
+config WIFI_SSID
+    string "WiFi SSID"
+	default "myssid"
+	help
+		SSID (network name) for the example to connect to.
+
+config WIFI_PASSWORD
+    string "WiFi Password"
+	default "mypassword"
+	help
+		WiFi password (WPA or WPA2) for the example to use.
+
+		Can be left blank if the network has no security set.
+
+config SERVER_HOST
+    string "Server address to connect to"
+    default "192.168.0.1"
+    help
+        Server URL to send data
+
+config SERVER_PORT
+	int "Port to connect to"
+	default 25666
+	help
+		Port
+
+config TCP_TIMEOUT
+	int "Timeout in ms"
+	default 30000
+	help
+		Timeout
+
+config AUDIO_RATE
+	int "Sample Rate in hz"
+	default 44100
+	help
+		Audio sample rate
+
+config AUDIO_BITS
+	int "Audio bits"
+	default 16
+	help
+		Audio bits
+
+config AUDIO_CHANNELS
+	int "Audio channels"
+	default 2
+	help
+		Audio channels
+
+endmenu
