@@ -7,6 +7,8 @@
 
 # Usage
 
+Run `$ idf.py set-target esp32`.
+
 Run `$ idf.py menuconfig` and navigate to the task\_1\_4 submenu.
 
 Configure host, ssid and password. All other configurations should work by default.
