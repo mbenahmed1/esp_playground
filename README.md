@@ -1,5 +1,6 @@
 # ESP32 playground
 
+<image src="https://docs.espressif.com/projects/esp-adf/en/latest/_static/espressif-logo.svg" width="300" />
 <image src="https://docs.espressif.com/projects/esp-adf/en/latest/_images/esp32-lyrat-v4.2-side.jpg" width="300" />
 
 In this repository I tried out some of the examples from the LyraT documentation.
