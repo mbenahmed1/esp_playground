@@ -24,8 +24,7 @@ ln = sns.relplot(
     kind="line",
     markers=True   
 )
-ln.set(xlabel="Abstand [m]", ylabel="Durchsatz [mbit/s]", title="Durchsatzmessung über 60 Sekunden")
-
+ln.set(xlabel="Zeit [s]", ylabel="Durchsatz [mbit/s]", title="Durchsatzmessung über 60 Sekunden")
 # bar plot
 bar = sns.catplot(x="distance", y="mbit/s", hue="protocol", kind="bar", data=df)
 bar.set(xlabel="Abstand [m]", ylabel="Durchsatz [mbit/s]", title="Durchsatzmessung über 60 Sekunden")
