@@ -18,3 +18,6 @@ Here the LyraT board first records audio and saves it as .wav and afterwards sen
 
 ## Task 1.4
 In this taks the recorded audio is saved as .wav and send via tcp to a server. The server then converts the bytes to .flac file, which is smaller than pure wav.
+
+## Evaluation
+The evaluation folder contains data, plots and a short discription of throughput measurement on increasing distances.
